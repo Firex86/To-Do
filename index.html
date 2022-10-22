@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Tehtavalista.css">
+    <script src="Toiminnot.js"></script>
+
 </head>
 <body>
 <!--Lisäystoiminto-->
-<div id="Lisays" class="header">
+<div id="Lisays" class="otsikko">
     <h1>Minun To Do lista</h1>
     <input type="text" id="lisaaSisaltoa" placeholder="Lisää listaan tehtäviä">
-    <span onclick="uusiListaus()" class="lisaaNappi">Lisää</span>
+    <span onclick="uusiElementti()" class="lisaaNappi">Lisää</span>
     <!--Lisää tavaraa diviin-->
+    </div>
 
 
-<ol id="Listani">
+<ol id="Listani" class="Lista">
 	<dl>
 		<li>Luo HTML pohja</li>
 		<li>Luo CSS tiedosto</li>
