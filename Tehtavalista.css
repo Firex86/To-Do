@@ -1,27 +1,41 @@
 .otsikko {
     background-color: rgb(147, 235, 235);
+    color: black;
     padding: 40px 40px;
-    border-radius: 15px;
-    color: rgb(255, 255, 255);
+    border-radius: 10px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
+input {
+    margin: 0px;
+    border: none;
+    border-radius: 15px 0px 0px 15px;
+    width: 75%;
+    height: 35px;
+    padding: 0px;
+    float: left;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .lisaaNappi {
-    padding: 13px;
+    padding: 0px;
+    height: 35px;
     width: 25%;
-    background: rgb(30, 212, 85);
+    background: #F4F39A;
+    color: black;
     float: left;
     text-align: center;
     font-size: 20px;
     cursor: pointer;
     transition: 0.5s;
-    border-radius: 15px;
+    border-radius: 0px 15px 15px 0px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .lisaaNappi:hover {
-    background-color: rgb(147, 235, 235);
+    background-color: #f0ed40;
 }
 
 .Lista {
@@ -31,30 +45,24 @@
 }
 
 ul li {
+    list-style: none;
     padding: 12px 8px 12px 40px;
-    background: rgb(201, 38, 179);
+    background: #BAF2D8;
     font-size: 20px;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 ul li:nth-child(odd) {
-    background: rgb(5, 71, 126);
+    background: #F4F7F9;
 }
 
 ul li:hover {
-    background: rgb(167, 62, 62);
+    background: #F4F39A;
 }
 
-input {
-    margin: 0;
-    border: none;
-    border-radius: 15px;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 25px;
-}
 
 * {
     box-sizing: border-box;
 }
+
