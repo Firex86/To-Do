@@ -1,3 +1,4 @@
+/* Muokataan otsikosta mielekkäämmän näköinen*/
 .otsikko {
     background-color: rgb(147, 235, 235);
     color: black;
@@ -7,6 +8,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Muokataan kirjoituslaatikkoa mielekkäämmän näköiseksi*/
 input {
     margin: 0px;
     border: none;
@@ -19,6 +21,7 @@ input {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Muokataan lisää napista mielekkäämmän näköiseksi*/
 .lisaaNappi {
     padding: 0px;
     height: 35px;
@@ -34,16 +37,19 @@ input {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Hiiren ollessa lisää napin päällä muuttaa se väriä*/
 .lisaaNappi:hover {
     background-color: #f0ed40;
 }
 
+/* Muokataan listan asettelua*/
 .Lista {
     margin: 10px;
     padding: 10px;
     text-align: left;
 }
 
+/* Muokataan listan osien asetusta ja muokataan mielekkäämmäksi*/
 ul li {
     list-style: none;
     padding: 12px 8px 12px 40px;
@@ -53,15 +59,31 @@ ul li {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Joka toinen listan osista eri värinen*/
 ul li:nth-child(odd) {
     background: #F4F7F9;
 }
 
+/* Hiiren ollessa listan osien päällä muuttaa se väriä*/
 ul li:hover {
     background: #F4F39A;
 }
 
+/* Muokataan sulje painike kellumaan listaosien oikeassa laidassa*/
+.sulje {
+    float: right;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
 
+/* Hiiren ollessa sulje painikkeen päällä muuttaa se väriä*/
+.sulje:hover {
+    background-color: rgb(147, 235, 235);
+    color: black;
+}
+
+/* Elementit ovat saman levyisiä*/
 * {
     box-sizing: border-box;
 }
