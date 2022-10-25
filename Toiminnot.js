@@ -1,45 +1,60 @@
-function uusiElementti() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("lisaaSisaltoa").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("Tekstikenttä on tyhjä! Et voi lisätä listausta.");
-  } else {
-    document.getElementById("Listani").appendChild(li);
-  }
-  document.getElementById("lisaaSisaltoa").value = "";
+const inputtdl = document.querySelector('.textarea')
+const buttontdl = document.querySelector('.buttoninput')
+const listtdl = document.querySelector('.todolist')
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "sulje";
-  span.appendChild(txt);
-  li.appendChild(span);
+function clickButton(e) {
+    e.preventDefault()
+    addTodo()
+}
 
-  for (i = 0; i < piilota.length; i++) {
-    piilota[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+// Listätään To Do listaan
+function addTodo() {
+    const itemall = document.createElement('div')
+    itemall.classList.add('itemall')
+
+    const item = document.createElement('p')
+    item.classList.add('item')
+    item.innerText = inputtdl.value
+    itemall.appendChild(item)
+
+    // Tarkistetaan onko tyhjä ja annetaan varoitus
+    if (inputtdl.value === '') {
+        alert("Tekstikenttä on tyhjä! Et voi lisätä listausta.")
+    } else {
+
+    const valmisbutton = document.createElement("button")
+    valmisbutton.innerHTML = '<i class="buttontwo"></i>'
+    valmisbutton.classList.add("valmis-button")
+    itemall.appendChild(valmisbutton)
+
+    const roskabutton = document.createElement("button")
+    roskabutton.innerHTML = '<i class="buttontwo"></i>'
+    roskabutton.classList.add("roska-button")
+    itemall.appendChild(roskabutton)
+
+    listtdl.appendChild(itemall)
+    inputtdl.value = ''
     }
-  }
 }
 
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "sulje";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+// Valmis ja poista toiminnot
+function okdel(e) {
+    const item = e.target
+
+    // Poista
+    if (item.classList[0] === 'roska-button') {
+        const todolist = item.parentElement
+        todolist.remove()
+    }
+
+    // Valmis
+    if (item.classList[0] === 'valmis-button') {
+        const todolist = item.parentElement
+        todolist.classList.toggle('valmis')
+    }
+
+    
 }
 
-
-var piilota = document.getElementsByClassName("sulje");
-var i;
-for (i = 0; i < piilota.length; i++) {
-  piilota[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+buttontdl.addEventListener('click', clickButton)
+listtdl.addEventListener('click', okdel)
