@@ -8,6 +8,11 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+    background-image: linear-gradient(to left, #F4F39A, #f3f175, #ecea48);
+    margin: 50px 2%;
+  }
+
 /* Muokataan kirjoituslaatikkoa mielekkäämmän näköiseksi*/
 input {
     margin: 0px;
