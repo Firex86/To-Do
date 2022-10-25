@@ -1,95 +1,130 @@
-/* Muokataan otsikosta mielekkäämmän näköinen*/
-.otsikko {
-    background-color: rgb(147, 235, 235);
-    color: black;
-    padding: 40px 40px;
-    border-radius: 10px;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
 
 body {
     background-image: linear-gradient(to left, #F4F39A, #f3f175, #ecea48);
-    margin: 50px 2%;
+    margin: 5% 2%;
   }
 
-/* Muokataan kirjoituslaatikkoa mielekkäämmän näköiseksi*/
-input {
-    margin: 0px;
-    border: none;
-    border-radius: 15px 0px 0px 15px;
-    width: 75%;
-    height: 35px;
-    padding: 0px;
-    float: left;
+/* Otsikko "ToDo" */
+.otsikko {
     font-size: 25px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Muokataan lisää napista mielekkäämmän näköiseksi*/
-.lisaaNappi {
-    padding: 0px;
-    height: 35px;
-    width: 25%;
-    background: #F4F39A;
-    color: black;
-    float: left;
     text-align: center;
+    margin: 0 0 30px 0;
+    color: white;
+    text-shadow: 3px 1px black;
+}
+
+/* Lista */
+.lisaaSisaltoa {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 60% 10%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.textarea {
+    min-height: 50px;
+    height: 50px;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 10px;
+    border-color: #333;
     font-size: 20px;
+    padding: 10px 10px;
+    
+}
+
+
+.buttoninput {
+    border-radius: 10px;
+    border-color: #333;
+    background-color: rgb(246, 250, 0);
+    font-size: 20px;
+    content: "\002B";
+}
+
+.buttoninput:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+.todolist {
+    margin-top: 20px;
+}
+
+.itemall {
+    display: grid;
+    grid-template-columns: 60% 5% 5%;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.item, .valmis-button, .roska-button {
+    border: none;
+    background-color: white;
+    min-height: 50px;
+    padding: 10px 10px;
+}
+
+.item {
+
+    border-radius: 10px 0 0 10px;
+    display: grid;
+    align-content: center;
+    font-size: 20px;
+}
+
+.valmis-button, .roska-button {
+    font-size: 15px;
+}
+
+.roska-button {
+    border-radius: 0 10px 10px 0;
+    content: "Poista";
+    background-color: #b65358;
+    
+}
+
+.valmis-button {
+    content: "Valmis";
+    background-color: #6eb95b;
+}
+
+.valmis-button:hover {
+    background-color: #2ac903;
+    color: white;
+}
+
+.roska-button::before {
+    content: '\2573';
+}
+
+.roska-button:hover {
+    background-color: #be000a;
+    color: white;
+}
+
+.valmis {
+    text-decoration: line-through;
+}
+
+.valmis-button::before {
+    content: '\2714';
+}
+
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+button, .valmis-button, .roska-button {
     cursor: pointer;
-    transition: 0.5s;
-    border-radius: 0px 15px 15px 0px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Hiiren ollessa lisää napin päällä muuttaa se väriä*/
-.lisaaNappi:hover {
-    background-color: #f0ed40;
-}
-
-/* Muokataan listan asettelua*/
-.Lista {
-    margin: 10px;
-    padding: 10px;
-    text-align: left;
-}
-
-/* Muokataan listan osien asetusta ja muokataan mielekkäämmäksi*/
-ul li {
-    list-style: none;
-    padding: 12px 8px 12px 40px;
-    background: #BAF2D8;
-    font-size: 20px;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Joka toinen listan osista eri värinen*/
-ul li:nth-child(odd) {
-    background: #F4F7F9;
-}
-
-/* Hiiren ollessa listan osien päällä muuttaa se väriä*/
-ul li:hover {
-    background: #F4F39A;
-}
-
-/* Muokataan sulje painike kellumaan listaosien oikeassa laidassa*/
-.sulje {
-    float: right;
-    border-radius: 15px 15px 15px 15px;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Hiiren ollessa sulje painikkeen päällä muuttaa se väriä*/
-.sulje:hover {
-    background-color: rgb(147, 235, 235);
-    color: black;
-}
-
-/* Elementit ovat saman levyisiä*/
-* {
-    box-sizing: border-box;
 }
 
