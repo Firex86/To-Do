@@ -1,31 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>To Do</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="Toiminnot.js" defer></script>
     <link rel="stylesheet" href="Tehtavalista.css">
-    <script src="Toiminnot.js"></script>
+    
+    
 
+    <title>Document</title>
 </head>
+
 <body>
-<!--Lisäystoiminto-->
-<div id="Lisays" class="otsikko">
-    <h1>Minun To Do lista</h1>
-    <input type="text" id="lisaaSisaltoa" placeholder="Lisää listaan tehtäviä">
-    <span onclick="uusiElementti()" class="lisaaNappi">Lisää</span>
+    <div class="otsikko">
+        <h1>To Do</h1>
     </div>
-
-<!--Lista Osio-->
-<ul id="Listani" class="Lista">
-		<li>Luo HTML pohja</li>
-		<li>Luo CSS tiedosto</li>
-		<li>Linkitä CSS HTML</li>
-		<li>Muokkaa CSS tiedostoa</li>
-		<li>Luo JS tiedosto</li>
-		<li>Linkitä JS HTML</li>
-		<li>Muokkaa JS tiedostoa</li>
-</ul>	
-
+    <div class="container">
+        <div class="lisaaSisaltoa">
+            <textarea name="text" class="textarea"></textarea>
+            <button type="button" class="buttoninput"><i class="buttontwo"></i>Lisää</button>
+        </div>
+    </div>
+    <div class="todolist">
+        
+    </div>
 </body>
+
 </html>
