@@ -1,60 +1,60 @@
-const inputtdl = document.querySelector('.textarea')
-const buttontdl = document.querySelector('.buttoninput')
-const listtdl = document.querySelector('.todolist')
+const kirjoitus = document.querySelector('.kirjoitusbox')
+const nappi = document.querySelector('.lisaanappi')
+const lista = document.querySelector('.todolista')
 
-function clickButton(e) {
+function painaNappia(e) {
     e.preventDefault()
     addTodo()
 }
 
 // Listätään To Do listaan
 function addTodo() {
-    const itemall = document.createElement('div')
-    itemall.classList.add('itemall')
+    const kaikkipalat = document.createElement('div')
+    kaikkipalat.classList.add('kaikkipalat')
 
-    const item = document.createElement('p')
-    item.classList.add('item')
-    item.innerText = inputtdl.value
-    itemall.appendChild(item)
+    const pala = document.createElement('p')
+    pala.classList.add('pala')
+    pala.innerText = kirjoitus.value
+    kaikkipalat.appendChild(pala)
 
     // Tarkistetaan onko tyhjä ja annetaan varoitus
-    if (inputtdl.value === '') {
+    if (kirjoitus.value === '') {
         alert("Tekstikenttä on tyhjä! Et voi lisätä listausta.")
     } else {
 
     const valmisbutton = document.createElement("button")
     valmisbutton.innerHTML = '<i class="buttontwo"></i>'
     valmisbutton.classList.add("valmis-button")
-    itemall.appendChild(valmisbutton)
+    kaikkipalat.appendChild(valmisbutton)
 
     const roskabutton = document.createElement("button")
     roskabutton.innerHTML = '<i class="buttontwo"></i>'
     roskabutton.classList.add("roska-button")
-    itemall.appendChild(roskabutton)
+    kaikkipalat.appendChild(roskabutton)
 
-    listtdl.appendChild(itemall)
-    inputtdl.value = ''
+    lista.appendChild(kaikkipalat)
+    kirjoitus.value = ''
     }
 }
 
 // Valmis ja poista toiminnot
-function okdel(e) {
-    const item = e.target
+function merkkaa(e) {
+    const pala = e.target
 
     // Poista
-    if (item.classList[0] === 'roska-button') {
-        const todolist = item.parentElement
+    if (pala.classList[0] === 'roska-button') {
+        const todolist = pala.parentElement
         todolist.remove()
     }
 
     // Valmis
-    if (item.classList[0] === 'valmis-button') {
-        const todolist = item.parentElement
+    if (pala.classList[0] === 'valmis-button') {
+        const todolist = pala.parentElement
         todolist.classList.toggle('valmis')
     }
 
     
 }
 
-buttontdl.addEventListener('click', clickButton)
-listtdl.addEventListener('click', okdel)
+nappi.addEventListener('click', painaNappia)
+lista.addEventListener('click', merkkaa)
