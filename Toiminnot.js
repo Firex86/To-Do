@@ -46,6 +46,10 @@ function merkkaa(e) {
         const todolist = pala.parentElement
         todolist.remove()
     }
+    
+    //Poista kaikki
+	if (pala.classLisst[0] === 'poistak-button')
+ 
 
     // Valmis
     if (pala.classList[0] === 'valmis-button') {
@@ -53,6 +57,9 @@ function merkkaa(e) {
         todolist.classList.toggle('valmis')
     }
 
+  //Valmis kaikki
+	if (pala.classList[0] === 'valmisk-button')
+      
     
 }
 
