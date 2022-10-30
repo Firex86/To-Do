@@ -133,9 +133,11 @@ button, .valmis-button, .roska-button {
     cursor: pointer;
 }
 
-.footter{
-	background-image: linear-gradient(to right, white, blue);
-	border-image: linear-gradient(to left, white, blue);
-	border-style: solid;
+.footer{
+	
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 	text-align: center;
 }
