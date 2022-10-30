@@ -35,6 +35,9 @@ function addTodo() {
     lista.appendChild(kaikkipalat)
     kirjoitus.value = ''
     }
+
+    //Tallennus localStorageen
+    localStorage.setItem('Listani', pala.innerText);
 }
 
 // Valmis ja poista toiminnot
@@ -47,19 +50,12 @@ function merkkaa(e) {
         todolist.remove()
     }
     
-    //Poista kaikki
-	if (pala.classLisst[0] === 'poistak-button')
- 
-
     // Valmis
     if (pala.classList[0] === 'valmis-button') {
         const todolist = pala.parentElement
         todolist.classList.toggle('valmis')
     }
-
-  //Valmis kaikki
-	if (pala.classList[0] === 'valmisk-button')
-      
+    
     
 }
 
