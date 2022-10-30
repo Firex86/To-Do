@@ -23,14 +23,14 @@ function addTodo() {
     } else {
 
     const valmisbutton = document.createElement("button")
-    valmisbutton.innerHTML = '<i class="buttontwo"></i>'
-    valmisbutton.classList.add("valmis-button")
-    kaikkipalat.appendChild(valmisbutton)
+        valmisbutton.innerHTML = '<i class="buttontwo"></i>'
+        valmisbutton.classList.add("valmis-button")
+        kaikkipalat.appendChild(valmisbutton)
 
     const roskabutton = document.createElement("button")
-    roskabutton.innerHTML = '<i class="buttontwo"></i>'
-    roskabutton.classList.add("roska-button")
-    kaikkipalat.appendChild(roskabutton)
+        roskabutton.innerHTML = '<i class="buttontwo"></i>'
+        roskabutton.classList.add("roska-button")
+        kaikkipalat.appendChild(roskabutton)
 
     lista.appendChild(kaikkipalat)
     kirjoitus.value = ''
