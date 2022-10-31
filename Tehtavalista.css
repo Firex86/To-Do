@@ -129,7 +129,7 @@ body {
 
 
 
-button, .valmis-button, .roska-button {
+button, .valmis-button, .roska-button, poistakaikki, valmiskaikki {
     cursor: pointer;
 }
 
@@ -141,3 +141,32 @@ button, .valmis-button, .roska-button {
     width: 100%;
 	text-align: center;
 }
+
+.valmiskaikki {
+    border-radius: 10px;
+    border-color: #333;
+    background-color: rgb(246, 250, 0);
+    font-size: 20px;
+    content: "\002B";
+}
+
+.poistakaikki {
+    border-radius: 10px;
+    border-color: #333;
+    background-color: rgb(246, 250, 0);
+    font-size: 20px;
+    content: "\002B";
+}
+
+.MuutToiminnot {
+    position: fixed;
+    left: 0;
+    margin-top: 5%;
+    padding-bottom: 50px;
+    bottom: 10%;
+    width: 100%;
+	text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
