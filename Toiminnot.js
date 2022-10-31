@@ -1,17 +1,20 @@
 const kirjoitus = document.querySelector('.kirjoitusbox')
 const nappi = document.querySelector('.lisaanappi')
 const lista = document.querySelector('.todolista')
+const poistakaikki = document.querySelector('.poistakaikki')
+const valmiskaikki = document.querySelector('.valmiskaikki')
 
 function painaNappia(e) {
     e.preventDefault()
-    addTodo()
+    LisääTodo()
 }
 
 // Listätään To Do listaan
-function addTodo() {
+function LisääTodo() {
     const kaikkipalat = document.createElement('div')
     kaikkipalat.classList.add('kaikkipalat')
 
+    //Luodaan elementti p joka sisältää kirjoitetun ja lisätään pala elementtiin, joka osa kaikkipalat elementtiä
     const pala = document.createElement('p')
     pala.classList.add('pala')
     pala.innerText = kirjoitus.value
@@ -22,11 +25,13 @@ function addTodo() {
         alert("Tekstikenttä on tyhjä! Et voi lisätä listausta.")
     } else {
 
+    //Luodaan valmisbutton nappi
     const valmisbutton = document.createElement("button")
         valmisbutton.innerHTML = '<i class="buttontwo"></i>'
         valmisbutton.classList.add("valmis-button")
         kaikkipalat.appendChild(valmisbutton)
 
+    //Luodaan roskabutton nappi.
     const roskabutton = document.createElement("button")
         roskabutton.innerHTML = '<i class="buttontwo"></i>'
         roskabutton.classList.add("roska-button")
@@ -55,9 +60,22 @@ function merkkaa(e) {
         const todolist = pala.parentElement
         todolist.classList.toggle('valmis')
     }
-    
+   
     
 }
+
+// Poista kaikki listaukset
+    poistakaikki.onclick = () => {
+        document
+            .querySelectorAll(".kaikkipalat")
+            .forEach((e) => e.parentNode.removeChild(e));
+}
+
+    
+// Merkitse kaikki valmiiksi
+    valmiskaikki.onclick = () => {
+        document.querySelector(".todolista").classList.toggle('valmis');
+    }
 
 nappi.addEventListener('click', painaNappia)
 lista.addEventListener('click', merkkaa)
