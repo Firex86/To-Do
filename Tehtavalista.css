@@ -41,6 +41,17 @@ body {
     
 }
 
+/* Muotoillaan footeria*/
+.footer{
+	
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
 /* Muotoillaan lisäys nappia */
 .lisaanappi {
     border-radius: 10px;
@@ -131,15 +142,6 @@ body {
 
 button, .valmis-button, .roska-button, poistakaikki, valmiskaikki {
     cursor: pointer;
-}
-
-.footer{
-	
-	position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-	text-align: center;
 }
 
 .valmiskaikki {
